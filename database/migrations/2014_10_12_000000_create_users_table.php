@@ -19,10 +19,12 @@ class CreateUsersTable extends Migration
             $table->date('birthday')->comment('Y-m-d')->nullable();
             $table->tinyInteger('gender')->default('0');
             $table->string('email')->unique();
+            $table->integer('identity_card')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
             $table->string('image')->nullable();
+            $table->integer('identity_card');
             $table->string('password');
             $table->tinyInteger('role')->default('1');
             $table->rememberToken();
